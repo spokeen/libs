@@ -1,0 +1,24 @@
+{
+  "name": "libs",
+  "version": "1.0.0",
+  "description": "各种框架库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spokeen/libs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spokeen/libs/issues"
+  },
+  "homepage": "https://github.com/spokeen/libs#readme",
+  "dependencies": {
+    "lodash": "^4.17.20",
+    "seamless-immutable": "^7.1.4"
+  }
+}
