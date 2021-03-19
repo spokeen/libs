@@ -7,7 +7,6 @@ import json from './data.json5';
 import printMe from './print.js';
 
 
-
 console.log(json.title); // output `JSON5 Example`
 console.log(json.owner.name); // output `Tom Preston-Werner`
 printMe();

@@ -19,6 +19,7 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     contentBase: './dist', // 服务器基目录
+    hot: true
   },
   module: {
     rules: [
