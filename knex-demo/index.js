@@ -1,27 +1,21 @@
+const path = require("path");
+
 const knex = require("knex")({
-  client: "better-sqlite3",
+  client: "better-sqlite3", // or 'better-sqlite3'
   connection: {
-    filename: "./mydb.sqlite",
-    flags: ["useNullAsDefault"],
+    filename: "./mydb.db",
   },
-  log: {
-    warn(message) {
-      console.warn("warn", message);
-    },
-    error(message) {
-      console.error("error", message);
-    },
-    deprecate(message) {
-      console.deprecate("deprecate", message);
-    },
-    debug(message) {
-      console.debug("debug", message);
-    },
-  },
+  useNullAsDefault: true,
+  debug: true,
 });
 
-knex.schema.createTable("users", function (table) {
-  table.increments();
-  table.string("name");
-  table.timestamps();
-});
+async function createTable() {
+  await knex.schema.createTable("users", function (table) {
+    table.increments();
+    table.string("name");
+    table.string("age");
+    table.timestamps();
+  });
+}
+
+createTable();
