@@ -18,4 +18,6 @@ async function createTable() {
   });
 }
 
-createTable();
+// createTable();
+
+knex.migrate.latest();
