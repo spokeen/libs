@@ -9,15 +9,17 @@ const knex = require("knex")({
   debug: true,
 });
 
-async function createTable() {
-  await knex.schema.createTable("users", function (table) {
-    table.increments();
-    table.string("name");
-    table.string("age");
-    table.timestamps();
-  });
-}
+module.exports = knex;
+
+// async function createTable() {
+//   await knex.schema.createTable("users", function (table) {
+//     table.increments();
+//     table.string("name");
+//     table.string("age");
+//     table.timestamps();
+//   });
+// }
 
 // createTable();
 
-knex.migrate.latest();
+// knex.migrate.latest();
